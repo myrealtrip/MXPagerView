@@ -1,0 +1,80 @@
+client:
+  name: basic
+tools: {}
+targets:
+  "MXPagerView-debug.module": ["<MXPagerView-debug.module>"]
+  "MXPagerViewPackageTests-debug.test": ["<MXPagerViewPackageTests-debug.test>"]
+  "MXPagerViewTests-debug.module": ["<MXPagerViewTests-debug.module>"]
+  "PackageStructure": ["<PackageStructure>"]
+  "main": ["<MXPagerView-debug.module>"]
+  "test": ["<MXPagerView-debug.module>","<MXPagerViewPackageTests-debug.test>","<MXPagerViewTests-debug.module>"]
+default: "main"
+nodes:
+  "/Users/doosan.baek/MXPagerView/Sources/MXPagerView/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/Users/doosan.baek/MXPagerView/Tests/MXPagerViewTests/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+commands:
+  "/Users/doosan.baek/MXPagerView/.build/arm64-apple-macosx/debug/MXPagerView.build/MXPagerView.m.o":
+    tool: clang
+    inputs: ["/Users/doosan.baek/MXPagerView/Sources/MXPagerView/MXPagerView.m"]
+    outputs: ["/Users/doosan.baek/MXPagerView/.build/arm64-apple-macosx/debug/MXPagerView.build/MXPagerView.m.o"]
+    description: "Compiling MXPagerView MXPagerView.m"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang","-fobjc-arc","-target","arm64-apple-macosx10.13","-g","-O0","-DSWIFT_PACKAGE=1","-DDEBUG=1","-fblocks","-index-store-path","/Users/doosan.baek/MXPagerView/.build/arm64-apple-macosx/debug/index/store","-fmodules","-fmodule-name=MXPagerView","-I","/Users/doosan.baek/MXPagerView/Sources/MXPagerView/include","-fmodules-cache-path=/Users/doosan.baek/MXPagerView/.build/arm64-apple-macosx/debug/ModuleCache","-isysroot","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-fPIC","-MD","-MT","dependencies","-MF","/Users/doosan.baek/MXPagerView/.build/arm64-apple-macosx/debug/MXPagerView.build/MXPagerView.m.d","-c","/Users/doosan.baek/MXPagerView/Sources/MXPagerView/MXPagerView.m","-o","/Users/doosan.baek/MXPagerView/.build/arm64-apple-macosx/debug/MXPagerView.build/MXPagerView.m.o"]
+    deps: "/Users/doosan.baek/MXPagerView/.build/arm64-apple-macosx/debug/MXPagerView.build/MXPagerView.m.d"
+
+  "/Users/doosan.baek/MXPagerView/.build/arm64-apple-macosx/debug/MXPagerView.build/MXPagerViewController.m.o":
+    tool: clang
+    inputs: ["/Users/doosan.baek/MXPagerView/Sources/MXPagerView/MXPagerViewController.m"]
+    outputs: ["/Users/doosan.baek/MXPagerView/.build/arm64-apple-macosx/debug/MXPagerView.build/MXPagerViewController.m.o"]
+    description: "Compiling MXPagerView MXPagerViewController.m"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang","-fobjc-arc","-target","arm64-apple-macosx10.13","-g","-O0","-DSWIFT_PACKAGE=1","-DDEBUG=1","-fblocks","-index-store-path","/Users/doosan.baek/MXPagerView/.build/arm64-apple-macosx/debug/index/store","-fmodules","-fmodule-name=MXPagerView","-I","/Users/doosan.baek/MXPagerView/Sources/MXPagerView/include","-fmodules-cache-path=/Users/doosan.baek/MXPagerView/.build/arm64-apple-macosx/debug/ModuleCache","-isysroot","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-fPIC","-MD","-MT","dependencies","-MF","/Users/doosan.baek/MXPagerView/.build/arm64-apple-macosx/debug/MXPagerView.build/MXPagerViewController.m.d","-c","/Users/doosan.baek/MXPagerView/Sources/MXPagerView/MXPagerViewController.m","-o","/Users/doosan.baek/MXPagerView/.build/arm64-apple-macosx/debug/MXPagerView.build/MXPagerViewController.m.o"]
+    deps: "/Users/doosan.baek/MXPagerView/.build/arm64-apple-macosx/debug/MXPagerView.build/MXPagerViewController.m.d"
+
+  "<MXPagerView-debug.module>":
+    tool: phony
+    inputs: ["/Users/doosan.baek/MXPagerView/.build/arm64-apple-macosx/debug/MXPagerView.build/MXPagerView.m.o","/Users/doosan.baek/MXPagerView/.build/arm64-apple-macosx/debug/MXPagerView.build/MXPagerViewController.m.o"]
+    outputs: ["<MXPagerView-debug.module>"]
+
+  "<MXPagerViewPackageTests-debug.test>":
+    tool: phony
+    inputs: ["/Users/doosan.baek/MXPagerView/.build/arm64-apple-macosx/debug/MXPagerViewPackageTests.xctest/Contents/MacOS/MXPagerViewPackageTests"]
+    outputs: ["<MXPagerViewPackageTests-debug.test>"]
+
+  "<MXPagerViewTests-debug.module>":
+    tool: phony
+    inputs: ["/Users/doosan.baek/MXPagerView/.build/arm64-apple-macosx/debug/MXPagerViewTests.build/MXPagerViewTests.swift.o","/Users/doosan.baek/MXPagerView/.build/arm64-apple-macosx/debug/MXPagerViewTests.swiftmodule"]
+    outputs: ["<MXPagerViewTests-debug.module>"]
+
+  "C.MXPagerViewPackageTests-debug.test":
+    tool: shell
+    inputs: ["/Users/doosan.baek/MXPagerView/.build/arm64-apple-macosx/debug/MXPagerView.build/MXPagerView.m.o","/Users/doosan.baek/MXPagerView/.build/arm64-apple-macosx/debug/MXPagerView.build/MXPagerViewController.m.o","/Users/doosan.baek/MXPagerView/.build/arm64-apple-macosx/debug/MXPagerViewTests.build/MXPagerViewTests.swift.o"]
+    outputs: ["/Users/doosan.baek/MXPagerView/.build/arm64-apple-macosx/debug/MXPagerViewPackageTests.xctest/Contents/MacOS/MXPagerViewPackageTests"]
+    description: "Linking /Users/doosan.baek/MXPagerView/.build/arm64-apple-macosx/debug/MXPagerViewPackageTests.xctest/Contents/MacOS/MXPagerViewPackageTests"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-L","/Users/doosan.baek/MXPagerView/.build/arm64-apple-macosx/debug","-o","/Users/doosan.baek/MXPagerView/.build/arm64-apple-macosx/debug/MXPagerViewPackageTests.xctest/Contents/MacOS/MXPagerViewPackageTests","-module-name","MXPagerViewPackageTests","-Xlinker","-bundle","-Xlinker","-rpath","-Xlinker","@loader_path/../../../","@/Users/doosan.baek/MXPagerView/.build/arm64-apple-macosx/debug/MXPagerViewPackageTests.product/Objects.LinkFileList","-Xlinker","-rpath","-Xlinker","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift-5.5/macosx","-target","arm64-apple-macosx13.0","-Xlinker","-add_ast_path","-Xlinker","/Users/doosan.baek/MXPagerView/.build/arm64-apple-macosx/debug/MXPagerViewTests.swiftmodule","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib"]
+
+  "C.MXPagerViewTests-debug.module":
+    tool: swift-compiler
+    inputs: ["/Users/doosan.baek/MXPagerView/Tests/MXPagerViewTests/MXPagerViewTests.swift","/Users/doosan.baek/MXPagerView/.build/arm64-apple-macosx/debug/MXPagerView.build/MXPagerView.m.o","/Users/doosan.baek/MXPagerView/.build/arm64-apple-macosx/debug/MXPagerView.build/MXPagerViewController.m.o"]
+    outputs: ["/Users/doosan.baek/MXPagerView/.build/arm64-apple-macosx/debug/MXPagerViewTests.build/MXPagerViewTests.swift.o","/Users/doosan.baek/MXPagerView/.build/arm64-apple-macosx/debug/MXPagerViewTests.swiftmodule"]
+    executable: "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    module-name: "MXPagerViewTests"
+    module-output-path: "/Users/doosan.baek/MXPagerView/.build/arm64-apple-macosx/debug/MXPagerViewTests.swiftmodule"
+    import-paths: ["/Users/doosan.baek/MXPagerView/.build/arm64-apple-macosx/debug"]
+    temps-path: "/Users/doosan.baek/MXPagerView/.build/arm64-apple-macosx/debug/MXPagerViewTests.build"
+    objects: ["/Users/doosan.baek/MXPagerView/.build/arm64-apple-macosx/debug/MXPagerViewTests.build/MXPagerViewTests.swift.o"]
+    other-args: ["-target","arm64-apple-macosx13.0","-swift-version","5","-enable-batch-mode","-index-store-path","/Users/doosan.baek/MXPagerView/.build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-g","-j12","-DSWIFT_PACKAGE","-DDEBUG","-Xcc","-fmodule-map-file=/Users/doosan.baek/MXPagerView/.build/arm64-apple-macosx/debug/MXPagerView.build/module.modulemap","-Xcc","-I","-Xcc","/Users/doosan.baek/MXPagerView/Sources/MXPagerView/include","-module-cache-path","/Users/doosan.baek/MXPagerView/.build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-color-diagnostics","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-Xcc","-isysroot","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Xcc","-fPIC","-package-name","mxpagerview"]
+    sources: ["/Users/doosan.baek/MXPagerView/Tests/MXPagerViewTests/MXPagerViewTests.swift"]
+    is-library: true
+    enable-whole-module-optimization: false
+    num-threads: 12
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Users/doosan.baek/MXPagerView/Sources/MXPagerView/","/Users/doosan.baek/MXPagerView/Tests/MXPagerViewTests/","/Users/doosan.baek/MXPagerView/Package.swift","/Users/doosan.baek/MXPagerView/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+

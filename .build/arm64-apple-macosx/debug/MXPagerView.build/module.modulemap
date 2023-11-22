@@ -1,0 +1,4 @@
+module MXPagerView {
+    umbrella header "/Users/doosan.baek/MXPagerView/Sources/MXPagerView/include/MXPagerView.h"
+    export *
+}
